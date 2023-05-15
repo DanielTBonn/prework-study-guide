@@ -39,3 +39,35 @@ p {
     border: 5px solid gray;
     box-shadow: 5px 10px #A8D7B5;
 }
+
+.nav {
+    background-color: gray;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+}
+
+.section-finder {
+    list-style-type: none;
+    display: flex;
+    margin-right: 2rem;
+}
+
+nav li {
+    display: list-item;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 75%;
+
+}
+
+header {
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    margin-top: 7.5px;
+}

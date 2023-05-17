@@ -24,3 +24,22 @@ console.log("Here are the topics we learned through prework!");
 listTopics();
 console.log("Which topic should we study first?");
 selectTopic();
+
+function collapseCards() {
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    console.log("collapseCards is working")
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var card = this.nextElementSibling;
+            if (card.style.display === "block") {
+                card.style.display === "none";
+            } else {
+                card.style.display = "block";
+            }
+        });
+    }
+}
+
+collapseCards();

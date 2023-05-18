@@ -25,19 +25,22 @@ listTopics();
 console.log("Which topic should we study first?");
 selectTopic();
 
+var count = 0;
 function collapseCards() {
     var coll = document.getElementsByClassName("collapsible");
     var i;
-    console.log("collapseCards is working")
+    count += 1;
+    console.log("collapseCards is working " + count + "times");
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var card = this.nextElementSibling;
             if (card.style.display === "block") {
-                card.style.display === "none";
+                card.style.display = "none";
             } else {
                 card.style.display = "block";
             }
+            
         });
     }
 }

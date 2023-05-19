@@ -25,12 +25,19 @@ listTopics();
 console.log("Which topic should we study first?");
 selectTopic();
 
-var count = 0;
+
+var links = document.querySelectorAll('a')
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    const linkHref = link.getAttribute('href')
+    const targetCollapsible = document.querySelector(`${linkHref} .collapsible`)
+    if (targetCollapsible && targetCollapsible.nextElementSibling) targetCollapsible.nextElementSibling.style.display = 'block'
+  })
+})
+
 function collapseCards() {
     var coll = document.getElementsByClassName("collapsible");
     var i;
-    count += 1;
-    console.log("collapseCards is working " + count + "times");
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");

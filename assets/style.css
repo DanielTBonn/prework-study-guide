@@ -38,7 +38,7 @@ p {
     padding: 10px;
     border: 5px solid gray;
     box-shadow: 5px 10px #A8D7B5;
-    display: none;
+    display: block;
     overflow: hidden;
 }
 

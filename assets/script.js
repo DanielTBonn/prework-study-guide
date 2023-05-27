@@ -42,10 +42,10 @@ function collapseCards() {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var card = this.nextElementSibling;
-            if (card.style.display === "block") {
-                card.style.display = "none";
-            } else {
+            if (card.style.display === "none") {
                 card.style.display = "block";
+            } else {
+                card.style.display = "none";
             }
             
         });
